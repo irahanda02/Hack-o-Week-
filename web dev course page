@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Dev Bootcamp</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{color:white;background:#0f172a}
+
+/* BACKGROUND */
+.bg-image{position:fixed;width:100%;height:100%;background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover no-repeat;filter:blur(14px);z-index:-2}
+.bg-overlay{position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:-1}
+
+section{padding:60px 20px}
+h1,h2{text-align:center;margin-bottom:20px}
+
+/* HERO */
+.hero{height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover}
+.hero::before{content:"";position:absolute;width:100%;height:70vh;background:rgba(0,0,0,0.6)}
+.hero *{position:relative}
+
+.btn{padding:12px 25px;background:white;color:black;border:none;border-radius:25px;cursor:pointer}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+/* CARDS */
+.card{background:rgba(30,41,59,0.85);padding:20px;border-radius:15px}
+
+/* IMAGES */
+.card img{width:100%;border-radius:10px;margin-bottom:10px}
+
+/* PRICING */
+.price{font-size:28px;font-weight:bold;color:#38bdf8}
+
+/* FORM */
+form{max-width:400px;margin:auto;background:rgba(30,41,59,0.9);padding:20px;border-radius:15px}
+input{width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px}
+
+/* FAQ */
+.faq-item{margin:10px 0;padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;cursor:pointer}
+.faq-answer{display:none;color:#ccc;margin-top:8px}
+
+.highlight{color:#38bdf8}
+
+footer{background:#020617;padding:20px;text-align:center;margin-top:40px}
+</style>
+</head>
+
+<body>
+<div class="bg-image"></div>
+<div class="bg-overlay"></div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>🚀 Web Development Bootcamp</h1>
+<p>Become job-ready by building real-world projects from scratch</p>
+<button class="btn">Enroll Now</button>
+</section>
+
+<!-- WHY -->
+<section>
+<h2>Why Choose This Course?</h2>
+<div class="grid">
+<div class="card">✔ Step-by-step guidance from absolute beginner to advanced level.</div>
+<div class="card">✔ Focus on real-world projects instead of just theory.</div>
+<div class="card">✔ Learn industry-relevant skills used by top companies.</div>
+<div class="card">✔ Personal mentorship and doubt-solving sessions.</div>
+<div class="card">✔ Resume building and interview preparation included.</div>
+<div class="card">✔ Lifetime access to learning materials.</div>
+</div>
+</section>
+
+<!-- OUTCOMES -->
+<section>
+<h2>What You Will Achieve</h2>
+<div class="grid">
+<div class="card">💼 Build a professional portfolio with 5+ projects.</div>
+<div class="card">💻 Gain confidence to build websites from scratch.</div>
+<div class="card">🎯 Prepare for internships and entry-level jobs.</div>
+<div class="card">🚀 Understand real-world development workflows.</div>
+<div class="card">📈 Improve problem-solving and logical thinking.</div>
+<div class="card">🌐 Deploy your own live websites online.</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section>
+<h2>Pricing Plans</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Basic</h3>
+<p class="price">₹1999</p>
+<p>✔ Recorded Classes</p>
+<p>✔ 3 Projects</p>
+<p>✔ Basic Notes</p>
+<p>✔ Community Access</p>
+</div>
+
+<div class="card">
+<h3>Pro (Most Popular)</h3>
+<p class="price">₹3999</p>
+<p>✔ Live Classes</p>
+<p>✔ 5+ Projects</p>
+<p>✔ Mentor Support</p>
+<p>✔ Certificate</p>
+<p>✔ Doubt Solving</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p class="price">₹6999</p>
+<p>✔ Everything in Pro</p>
+<p>✔ Placement Support</p>
+<p>✔ Resume Building</p>
+<p>✔ Interview Preparation</p>
+<p>✔ 1-on-1 Mentorship</p>
+</div>
+
+</div>
+</section>
+
+<!-- REGISTRATION -->
+<section>
+<h2>Register Now</h2>
+<form>
+<input type="text" placeholder="Enter your name" required>
+<input type="email" placeholder="Enter your email" required>
+<input type="tel" placeholder="Enter your phone number" required>
+<button class="btn" type="submit">Submit</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Need Help?</h2>
+<p style="text-align:center;font-size:20px">
+📞 For any Queries call: <span class="highlight">+91 98765 43210</span>
+</p>
+</section>
+
+<!-- FAQ -->
+<section>
+<h2>FAQs</h2>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<b>Do I need prior experience?</b>
+<div class="faq-answer">No, the course is beginner friendly.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<b>Will I get placement support?</b>
+<div class="faq-answer">Yes, we help with resume and interviews.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<b>How long is the course?</b>
+<div class="faq-answer">4–6 weeks depending on pace.</div>
+</div>
+
+</section>
+
+<!-- COUNTDOWN -->
+<section>
+<h2>Next Batch Starts In</h2>
+<h2 id="timer"></h2>
+</section>
+
+<footer>
+<p>©️ 2026 Web Bootcamp</p>
+</footer>
+
+<script>
+function toggleFAQ(el){
+let ans = el.querySelector('.faq-answer');
+ans.style.display = ans.style.display==='block'?'none':'block';
+}
+
+// TIMER
+let t=86400;
+setInterval(()=>{
+let h=Math.floor(t/3600),
+m=Math.floor((t%3600)/60),
+s=t%60;
+
+document.getElementById('timer').innerText = h+'h '+m+'m '+s+'s';
+t--;
+},1000);
+</script>
+
+</body>
+</html>
